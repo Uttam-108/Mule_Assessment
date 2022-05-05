@@ -1,0 +1,40 @@
+MariaDB [(none)]> use films;
+Database changed
+
+
+MariaDB [films]> select * from Movies;
++-------------------+--------------+-------------+----------------------+----------+
+| Movie_Name        | Actor        | Actress     | year_of_publications | Dir_name |
++-------------------+--------------+-------------+----------------------+----------+
+| 83                | Ranveer      | Deepika     |                 2008 | Vimitha  |
+| Bhajrangi Bhaijan | Salman Khan  | karina khan |                 2020 | Rajmouli |
+| gully Boy         | Ranveer      | Alia        |                 2012 | Ram      |
+| Om Shanthi Om     | Sharukh Khan | Deepika     |                 2001 | Vijay    |
+| Ready             | Salman Khan  | priyanka    |                 2018 | Suraj    |
++-------------------+--------------+-------------+----------------------+----------+
+5 rows in set (0.001 sec)
+
+
+
+MariaDB [films]> select movie_name,Actor,Actress,year_of_publications,Dir_name from Movies;
++-------------------+--------------+-------------+----------------------+----------+
+| movie_name        | Actor        | Actress     | year_of_publications | Dir_name |
++-------------------+--------------+-------------+----------------------+----------+
+| 83                | Ranveer      | Deepika     |                 2008 | Vimitha  |
+| Bhajrangi Bhaijan | Salman Khan  | karina khan |                 2020 | Rajmouli |
+| gully Boy         | Ranveer      | Alia        |                 2012 | Ram      |
+| Om Shanthi Om     | Sharukh Khan | Deepika     |                 2001 | Vijay    |
+| Ready             | Salman Khan  | priyanka    |                 2018 | Suraj    |
++-------------------+--------------+-------------+----------------------+----------+
+5 rows in set (0.001 sec)
+
+
+
+MariaDB [films]> select * from Movies where Actor="Salman Khan";
++-------------------+-------------+-------------+----------------------+----------+
+| Movie_Name        | Actor       | Actress     | year_of_publications | Dir_name |
++-------------------+-------------+-------------+----------------------+----------+
+| Bhajrangi Bhaijan | Salman Khan | karina khan |                 2020 | Rajmouli |
+| Ready             | Salman Khan | priyanka    |                 2018 | Suraj    |
++-------------------+-------------+-------------+----------------------+----------+
+2 rows in set (0.001 sec)
